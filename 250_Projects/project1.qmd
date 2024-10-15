@@ -1,7 +1,7 @@
 ---
-title: "Client Report - [Insert Project Title]"
+title: "Project 1: What’s in a Name?"
 subtitle: "Course DS 250"
-author: "[STUDENT NAME]"
+author: "Nicholas Bastian"
 format:
   html:
     self-contained: true
@@ -22,7 +22,222 @@ format:
         caption: See code
 execute: 
   warning: false
-    
 ---
 
-### Paste in a template
+```{python}
+#| label: libraries
+#| include: false
+from lets_plot import *
+from lets_plot.mapping import as_discrete
+from skimpy import clean_columns
+import pandas as pd
+import numpy as np
+
+LetsPlot.setup_html(isolated_frame=True)
+```
+
+
+## Elevator pitch
+This project will show the popularity of names throughout the years and how their popularity has changed. The names we are sampling are Mary, Martha, Paul, and Peter. Another function of this will be to check our data and how it relates to famous movie releases. The data will be gathered from 
+
+```{python}
+#| label: project-data
+#| code-summary: Read and format project data
+# load the data
+students = pd.read_csv("https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv")
+students = clean_columns(students)
+students  # Displays the data in a table.
+```
+
+## Question|Task 1
+
+How does your name at your birth year compare to its use historically?
+
+The data provided in the graph show that Nicholas (my name), began to gain popularity in 1974, with a peak of popularity in 1997. I was born in 1999; near the time it was most popular. That being said, overall the name Nicholas is still more popular than it was 100 years ago.
+
+```{python}
+nicholas_df = students[students['name'] == 'Nicholas']  #Name 
+nicholas_1999 = nicholas_df[nicholas_df['year'] == 1999] #Year
+states = [col for col in nicholas_df.columns if col not in ['name', 'year', 'Total']] #States
+nicholas_df['total_across_states'] = nicholas_df[states].sum(axis=1)
+
+historical_mean = nicholas_df['total_across_states'].mean() #Averages
+historical_median = nicholas_df['total_across_states'].median()
+# Full Plot
+(
+    ggplot(data=nicholas_df, mapping=aes(x="year", y="total_across_states"))
+    + geom_point(aes(color="year"))
+    + geom_smooth(method="lm", color='blue')  # Adding a trend line (linear regression)
+    + labs(
+        title="Usage of the Name 'Nicholas' Over Time",
+        subtitle="Comparing the name Nicholas in 1999 to its historical usage",
+        x="Year",
+        y="Total Across States",
+        color="Year",
+        shape="Year",
+    )
+    + scale_color_gradient(low="blue", high="red")  # Color gradient for year highlighting
+)
+
+```
+
+## Question|Task 2
+
+If you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?
+
+According to the data provided by the graph I would assume that Brittany was most likely 34. I would not Guess her to be any age north of 24, or south of the age of 44. 
+
+```{python}
+# Filter the data for the name "Brittany"
+brittany_df = students[students['name'] == 'Brittany']
+
+# Calculate the total number of people named Brittany across states per year
+states = [col for col in brittany_df.columns if col not in ['name', 'year', 'Total']] #States
+brittany_df['total_across_states'] = brittany_df[states].sum(axis=1)
+
+# Calculate mean and median
+historical_mean_brittany = brittany_df['total_across_states'].mean() 
+historical_median_brittany = brittany_df['total_across_states'].median()
+
+# Most likely age
+peak_year = brittany_df.loc[brittany_df['total_across_states'].idxmax(), 'year']
+current_year = 2024
+most_likely_age = current_year - peak_year
+
+# Plot the usage of the name Brittany over time
+(
+    ggplot(data=brittany_df, mapping=aes(x="year", y="total_across_states"))
+    + geom_point(aes(color="year"))
+    + geom_smooth(method="lm", color='blue')  # Adding a trend line (linear regression)
+    + labs(
+        title="Usage of the Name 'Brittany' Over Time",
+        subtitle=f"Peak year: {peak_year}, Most likely age: {most_likely_age}",
+        x="Year",
+        y="Total Across States",
+        color="Year",
+        shape="Year",
+    )
+    + scale_color_gradient(low="blue", high="red")  # Color gradient for year highlighting
+)
+
+```
+
+## Question|Task 3
+
+Mary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names in a single chart. What trends do you notice?
+I notice that many of these names peaked in popularity around 1954, none of them have recovered in popularity in recent years. If I were to hear any of these names I would assume that they are older.
+
+```{python}
+christian_names_df = students[students['name'].isin(['Mary', 'Martha', 'Peter', 'Paul'])]
+
+# Filter data for years between 1920 and 2000
+christian_names_df = christian_names_df[(christian_names_df['year'] >= 1920) & (christian_names_df['year'] <= 2000)]
+
+# Calculate the total number of people with these names across states per year
+states = [col for col in christian_names_df.columns if col not in ['name', 'year', 'Total']]  # Check if 'Total' is still 'Total' after cleaning
+christian_names_df['total_across_states'] = christian_names_df[states].sum(axis=1)
+
+# Plot the usage of the four names over time
+p = (
+    ggplot(data=christian_names_df, mapping=aes(x="year", y="total_across_states", color="name"))
+    + geom_point(aes(shape="name"))
+    + geom_smooth(method="lm", se=False)  # Adding trend lines for each name
+    + labs(
+        title="Usage of Christian Names Over Time (1920-2000)",
+        subtitle="Comparing Mary, Martha, Peter, and Paul",
+        x="Year",
+        y="Total Across States",
+        color="Name",
+        shape="Name",
+    )
+    + scale_color_manual(values=['blue', 'green', 'red', 'orange'])  # Different colors for each name
+)
+
+# Show the plot
+p.show()  # Explicitly show the plot
+```
+
+
+## Question|Task 4
+
+Think of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?
+
+The name I decided to check was Luke, because Star Wars was released in 1977, which would provide us with the most data possible. Though this is a common name, the graph shows that after the movie's release there was a sharp increase in children named Luke. With each release of the sequels 1980 and 1983 there are local peaks. 
+
+```{python}
+# Filter the data for the name 'Luke'
+luke_df = students[students['name'] == 'Luke']
+
+# Filter data for years between 1920 and 2000
+luke_df = luke_df[(luke_df['year'] >= 1920) & (luke_df['year'] <= 2000)]
+
+# Calculate the total number of people named 'Luke' across states per year
+states = [col for col in luke_df.columns if col not in ['name', 'year', 'Total']]  # Check if 'Total' is still 'Total' after cleaning
+luke_df['total_across_states'] = luke_df[states].sum(axis=1)
+
+# Plot the usage of the name 'Luke' over time
+p = (
+    ggplot(data=luke_df, mapping=aes(x="year", y="total_across_states"))
+    + geom_line(color='blue', size=1.5)  # Line plot for the name Luke
+    + geom_vline(xintercept=1977, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, 
+                 label='A New Hope (1977)')  # Star Wars: A New Hope
+    + geom_vline(xintercept=1980, linetype='dashed', color='green', size=1, alpha=0.8, show_legend=True, 
+                 label='The Empire Strikes Back (1980)')  # The Empire Strikes Back
+    + geom_vline(xintercept=1983, linetype='dashed', color='orange', size=1, alpha=0.8, show_legend=True, 
+                 label='Return of the Jedi (1983)')  # Return of the Jedi
+    + labs(
+        title="Usage of the Name 'Luke' Over Time (1920-2000)",
+        subtitle="Release years of Star Wars movies marked by dashed lines",
+        x="Year",
+        y="Total Across States",
+    )
+)
+
+# Show the plot
+p.show()
+
+```
+
+## Question|Stretch
+
+Reproduce the chart Elliot using the data from the names_year.csv file.
+
+Below is a recreation of the chart from the stretch goal. Marking the release 1982, rerelease 1985, and rererelease 2002 of E.T. and the popularity of Elliot.
+
+```{python}
+# Filter the data for the name 'Elliot'
+elliot_df = students[students['name'] == 'Elliot']
+
+# Filter data for years between 1920 and 2000
+elliot_df = elliot_df[(elliot_df['year'] >= 1950) & (elliot_df['year'] <= 2020)]
+
+# Calculate the total number of people named 'Elliot' across states per year
+states = [col for col in elliot_df.columns if col not in ['name', 'year', 'Total']]  # Check if 'Total' is still 'Total' after cleaning
+elliot_df['total_across_states'] = elliot_df[states].sum(axis=1)
+
+# Plot the usage of the name 'Elliot' over time
+p = (
+    ggplot(data=elliot_df, mapping=aes(x="year", y="total_across_states"))
+    + geom_line(color='blue', size=1.5)  # Line plot for the name Elliot
+    + geom_vline(xintercept=1982, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, 
+                 label='E.T. Release (1982)')  # Mark the release of E.T.
+    + geom_vline(xintercept=1985, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, 
+                 label='E.T. Rerelease (1985)')  # Mark the rerelease of E.T.
+    + geom_vline(xintercept=2002, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, 
+                 label='E.T. Rererelease (2002)')  # Mark the rererelease of E.T.
+    + labs(
+        title="Usage of the Name 'Elliot' Over Time (1920-2000)",
+        subtitle="E.T. release in 1982 marked by a dashed red line",
+        x="Year",
+        y="Total Across States",
+    )
+)
+
+# Show the plot
+p.show()
+
+```
+
+Note: Non executing Python `Snippets` include (3) \`\`\` followed by (3) more \`\`\`, each on their own line. These are not single quotes, they are the key left of the number 1 key on the keyboard. The top row can include the language of code that is pasted inbetween the \`\`\`  marks. 
+
+Note: These also work in `Slack` and it is expected they are used for any code shared in that app. No screen shots allowed.
