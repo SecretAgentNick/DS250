@@ -1,0 +1,268 @@
+[
+  {
+    "objectID": "Templates/DS250_Template.html",
+    "href": "Templates/DS250_Template.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "THIS .qmd IS INSTRUCTIONAL AND SHOULD NOT BE USED TO WRITE YOUR REPORTS (EXCEPTION - PROJECT 0). THERE IS ANOTHER TEMPLATE FILE FOR THAT. YOU WILL NEED TO PREVIEW THE REPORT TO PRODUCE A .html FILE. YOU WILL SUBMIT THE .html FILE ON CANVAS."
+  },
+  {
+    "objectID": "Templates/DS250_Template.html#elevator-pitch",
+    "href": "Templates/DS250_Template.html#elevator-pitch",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "Elevator pitch",
+    "text": "Elevator pitch\nA SHORT (2-3 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS. (Note: this is not a summary of the project, but a summary of the results.)\nA Client has requested this analysis and this is your one shot of what you would say to your boss in a 2 min elevator ride before he takes your report and hands it to the client.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4python4ds/master/data-raw/mpg/mpg.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Templates/DS250_Template.html#questiontask-1",
+    "href": "Templates/DS250_Template.html#questiontask-1",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "Question|Task 1",
+    "text": "Question|Task 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\nAdd details here to answer the question but NOT like an assignment Q&A. You need to write your answers as a consulting solution report. A Client needs to understand the answer, but also needs to understand the decisions that went into the answer (when applicable).\ninclude figures in chunks and discuss your findings in the figure.\n\nYOU SHOULD HAVE QUALITY WRITING THAT DESCRIBES YOUR CHARTS AND TABLES.\nWE HIGHLY RECOMMEND GRAMMARLY TO FIX YOUR SPELLING AND GRAMMAR. WRITING TAKES TIME TO BE CLEAR. SPEND THE TIME TO PRACITCE.\nYOU SHOULD HAVE QUALITY COMMENTS THAT DESCRIBES YOUR CODES. OFTEN CODEERS WORK IN TEAMS AND YOU NEED TO HAVE QUALTIY COMMENTS FOR YOUR TEAM AND YOURSELF. YOU MAY NEED TO REVISIT CODE YOU WROTE OVER A YEAR AGO, AND IF YOU DONT COMMENT IT NOW YOU WONT REMEMBER WHY YOU DID WHAT YOU DID.\n\n\n\nRead and format data\n# Include and execute your code here"
+  },
+  {
+    "objectID": "Templates/DS250_Template.html#questiontask-2",
+    "href": "Templates/DS250_Template.html#questiontask-2",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "Question|Task 2",
+    "text": "Question|Task 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\n\nplot example\n# Include and execute your code here\n\n(\n  ggplot(df.head(500), aes(x='displ', y='hwy')) + geom_point()\n)\n\n\n\n   \n       \n       \n   \n   \n          \n   \n   \n\nMy useless chart"
+  },
+  {
+    "objectID": "Templates/DS250_Template.html#questiontask-3",
+    "href": "Templates/DS250_Template.html#questiontask-3",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "Question|Task 3",
+    "text": "Question|Task 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\n\nPROVIDE TABLES THAT HELP ADDRESS THE QUESTIONS AND TASKS (IF APPLICABLE).\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('manufacturer')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"manufacturer\",\"displ\",\"cty\", \"hwy\"])\n)\n\ndisplay(mydat)\n\n\n\n\n\n\ntable example {#cell-Q1-table}\n\n\n\nmanufacturer\ndispl\ncty\nhwy\n\n\n\n\n5\nhyundai\n34.0\n261\n376\n\n\n6\njeep\n36.6\n108\n141\n\n\n7\nland rover\n17.2\n46\n66\n\n\n8\nlincoln\n16.2\n34\n51\n\n\n9\nmercury\n17.6\n53\n72\n\n\n10\nnissan\n42.5\n235\n320\n\n\n11\npontiac\n19.8\n85\n132\n\n\n12\nsubaru\n34.4\n270\n358\n\n\n13\ntoyota\n100.4\n630\n847\n\n\n14\nvolkswagen\n60.9\n565\n789\n\n\n\n\n\n\n\nNote: Non executing Python Snippets include (3) ``` followed by (3) more ```, each on their own line. These are not single quotes, they are the key left of the number 1 key on the keyboard. The top row can include the language of code that is pasted inbetween the ``` marks.\nNote: These also work in Slack and it is expected they are used for any code shared in that app. No screen shots allowed."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html#title-2-header",
+    "href": "index.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "250_Projects/project6.html",
+    "href": "250_Projects/project6.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 6"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project4.html",
+    "href": "250_Projects/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project2.html",
+    "href": "250_Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project0.html",
+    "href": "250_Projects/project0.html",
+    "title": "Client Report - Introduction",
+    "section": "",
+    "text": "THIS .qmd IS INSTRUCTIONAL AND SHOULD NOT BE USED TO WRITE YOUR REPORTS (EXCEPTION - PROJECT 0). THERE IS ANOTHER TEMPLATE FILE FOR THAT. YOU WILL NEED TO PREVIEW THE REPORT TO PRODUCE A .html FILE. YOU WILL SUBMIT THE .html FILE ON CANVAS.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 0"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project0.html#elevator-pitch",
+    "href": "250_Projects/project0.html#elevator-pitch",
+    "title": "Client Report - Introduction",
+    "section": "Elevator pitch",
+    "text": "Elevator pitch\nThis project takes publically available data on penguin flipper length and body mass, so that we can visually observe if there is a correlation in flipper size to body mass.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4python4ds/master/data-raw/mpg/mpg.csv\")\n\n\nHighlight the Questions and Tasks",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 0"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project0.html#questiontask-1",
+    "href": "250_Projects/project0.html#questiontask-1",
+    "title": "Client Report - Introduction",
+    "section": "Question|TASK 1",
+    "text": "Question|TASK 1\nRecreate the example chart from PY4DS: CH2 Data Visualization of the textbook.\nThis chart shows the relation of Flipper Length in millimeters to penguin Body mass measured in grams.\n\n\nRead and format data\n# Include and execute your code here\npenguins = load_penguins()\npenguins.head()\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 0"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project0.html#questiontask-2",
+    "href": "250_Projects/project0.html#questiontask-2",
+    "title": "Client Report - Introduction",
+    "section": "Question|TASK 2",
+    "text": "Question|TASK 2\nInclude the table created from PY4DS: CH2 Data Visualization used to create the above chart\nThe chart above when graphed, shows that an increase in penguin flipper size correlates with a increase in penguin body mass.\n\n\nplot example\n# Include and execute your code here\n\n(\n    ggplot(data=penguins, mapping=aes(x=\"flipper_length_mm\", y=\"body_mass_g\"))\n    + geom_point(aes(color=\"species\", shape=\"species\"))\n    + geom_smooth(method=\"lm\")\n    + labs(\n        title=\"Body mass and flipper length\",\n        subtitle=\"Dimensions for Adelie, Chinstrap, and Gentoo Penguins\",\n        x=\"Flipper length (mm)\",\n        y=\"Body mass (g)\",\n        color=\"Species\",\n        shape=\"Species\",\n    )\n)\n\n\n\n   \n       \n       \n   \n   \n          \n   \n   \n\nMy useless chart",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 0"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html",
+    "href": "250_Projects/project1.html",
+    "title": "Project 1: What’s in a Name?",
+    "section": "",
+    "text": "This project will show the popularity of names throughout the years and how their popularity has changed. The names we are sampling are Mary, Martha, Paul, and Peter. Another function of this will be to check our data and how it relates to famous movie releases. The data will be gathered from\n\n\nRead and format project data\n# load the data\nstudents = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\")\nstudents = clean_columns(students)\nstudents  # Displays the data in a table.\n\n\n\n\n\n\n\n\n\nname\nyear\nak\nal\nar\naz\nca\nco\nct\ndc\n...\ntn\ntx\nut\nva\nvt\nwa\nwi\nwv\nwy\ntotal\n\n\n\n\n0\nAaden\n2005\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n...\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n5.0\n\n\n1\nAaden\n2007\n0.0\n5.0\n0.0\n5.0\n20.0\n6.0\n0.0\n0.0\n...\n5.0\n14.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n98.0\n\n\n2\nAaden\n2008\n0.0\n15.0\n13.0\n20.0\n135.0\n10.0\n9.0\n0.0\n...\n15.0\n99.0\n8.0\n26.0\n0.0\n11.0\n19.0\n5.0\n0.0\n939.0\n\n\n3\nAaden\n2009\n0.0\n28.0\n20.0\n23.0\n158.0\n22.0\n12.0\n0.0\n...\n33.0\n140.0\n6.0\n17.0\n0.0\n31.0\n23.0\n14.0\n0.0\n1242.0\n\n\n4\nAaden\n2010\n0.0\n8.0\n6.0\n12.0\n62.0\n9.0\n5.0\n0.0\n...\n9.0\n56.0\n0.0\n11.0\n0.0\n7.0\n12.0\n0.0\n0.0\n414.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n393379\nZyon\n2011\n0.0\n0.0\n0.0\n6.0\n0.0\n0.0\n0.0\n0.0\n...\n5.0\n9.0\n0.0\n8.0\n0.0\n0.0\n0.0\n0.0\n0.0\n117.0\n\n\n393380\nZyon\n2012\n0.0\n0.0\n0.0\n0.0\n5.0\n0.0\n0.0\n0.0\n...\n0.0\n7.5\n0.0\n12.0\n0.0\n0.0\n0.0\n0.0\n0.0\n118.5\n\n\n393381\nZyon\n2013\n0.0\n0.0\n0.0\n0.0\n6.0\n0.0\n0.0\n0.0\n...\n0.0\n5.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n93.0\n\n\n393382\nZyon\n2014\n0.0\n7.0\n0.0\n0.0\n0.0\n0.0\n0.0\n5.0\n...\n0.0\n7.0\n0.0\n9.0\n0.0\n0.0\n0.0\n0.0\n0.0\n73.0\n\n\n393383\nZyon\n2015\n0.0\n0.0\n0.0\n0.0\n7.0\n0.0\n0.0\n0.0\n...\n0.0\n10.0\n0.0\n8.0\n0.0\n0.0\n0.0\n0.0\n0.0\n87.5\n\n\n\n\n393384 rows × 54 columns",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html#elevator-pitch",
+    "href": "250_Projects/project1.html#elevator-pitch",
+    "title": "Project 1: What’s in a Name?",
+    "section": "",
+    "text": "This project will show the popularity of names throughout the years and how their popularity has changed. The names we are sampling are Mary, Martha, Paul, and Peter. Another function of this will be to check our data and how it relates to famous movie releases. The data will be gathered from\n\n\nRead and format project data\n# load the data\nstudents = pd.read_csv(\"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\")\nstudents = clean_columns(students)\nstudents  # Displays the data in a table.\n\n\n\n\n\n\n\n\n\nname\nyear\nak\nal\nar\naz\nca\nco\nct\ndc\n...\ntn\ntx\nut\nva\nvt\nwa\nwi\nwv\nwy\ntotal\n\n\n\n\n0\nAaden\n2005\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n...\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n5.0\n\n\n1\nAaden\n2007\n0.0\n5.0\n0.0\n5.0\n20.0\n6.0\n0.0\n0.0\n...\n5.0\n14.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n98.0\n\n\n2\nAaden\n2008\n0.0\n15.0\n13.0\n20.0\n135.0\n10.0\n9.0\n0.0\n...\n15.0\n99.0\n8.0\n26.0\n0.0\n11.0\n19.0\n5.0\n0.0\n939.0\n\n\n3\nAaden\n2009\n0.0\n28.0\n20.0\n23.0\n158.0\n22.0\n12.0\n0.0\n...\n33.0\n140.0\n6.0\n17.0\n0.0\n31.0\n23.0\n14.0\n0.0\n1242.0\n\n\n4\nAaden\n2010\n0.0\n8.0\n6.0\n12.0\n62.0\n9.0\n5.0\n0.0\n...\n9.0\n56.0\n0.0\n11.0\n0.0\n7.0\n12.0\n0.0\n0.0\n414.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n393379\nZyon\n2011\n0.0\n0.0\n0.0\n6.0\n0.0\n0.0\n0.0\n0.0\n...\n5.0\n9.0\n0.0\n8.0\n0.0\n0.0\n0.0\n0.0\n0.0\n117.0\n\n\n393380\nZyon\n2012\n0.0\n0.0\n0.0\n0.0\n5.0\n0.0\n0.0\n0.0\n...\n0.0\n7.5\n0.0\n12.0\n0.0\n0.0\n0.0\n0.0\n0.0\n118.5\n\n\n393381\nZyon\n2013\n0.0\n0.0\n0.0\n0.0\n6.0\n0.0\n0.0\n0.0\n...\n0.0\n5.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n0.0\n93.0\n\n\n393382\nZyon\n2014\n0.0\n7.0\n0.0\n0.0\n0.0\n0.0\n0.0\n5.0\n...\n0.0\n7.0\n0.0\n9.0\n0.0\n0.0\n0.0\n0.0\n0.0\n73.0\n\n\n393383\nZyon\n2015\n0.0\n0.0\n0.0\n0.0\n7.0\n0.0\n0.0\n0.0\n...\n0.0\n10.0\n0.0\n8.0\n0.0\n0.0\n0.0\n0.0\n0.0\n87.5\n\n\n\n\n393384 rows × 54 columns",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html#questiontask-1",
+    "href": "250_Projects/project1.html#questiontask-1",
+    "title": "Project 1: What’s in a Name?",
+    "section": "Question|Task 1",
+    "text": "Question|Task 1\nHow does your name at your birth year compare to its use historically?\nThe data provided in the graph show that Nicholas (my name), began to gain popularity in 1974, with a peak of popularity in 1997. I was born in 1999; near the time it was most popular. That being said, overall the name Nicholas is still more popular than it was 100 years ago.\n\n\nShow the code\nnicholas_df = students[students['name'] == 'Nicholas']  #Name \nnicholas_1999 = nicholas_df[nicholas_df['year'] == 1999] #Year\nstates = [col for col in nicholas_df.columns if col not in ['name', 'year', 'Total']] #States\nnicholas_df['total_across_states'] = nicholas_df[states].sum(axis=1)\n\nhistorical_mean = nicholas_df['total_across_states'].mean() #Averages\nhistorical_median = nicholas_df['total_across_states'].median()\n# Full Plot\n(\n    ggplot(data=nicholas_df, mapping=aes(x=\"year\", y=\"total_across_states\"))\n    + geom_point(aes(color=\"year\"))\n    + geom_smooth(method=\"lm\", color='blue')  # Adding a trend line (linear regression)\n    + labs(\n        title=\"Usage of the Name 'Nicholas' Over Time\",\n        subtitle=\"Comparing the name Nicholas in 1999 to its historical usage\",\n        x=\"Year\",\n        y=\"Total Across States\",\n        color=\"Year\",\n        shape=\"Year\",\n    )\n    + scale_color_gradient(low=\"blue\", high=\"red\")  # Color gradient for year highlighting\n)",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html#questiontask-2",
+    "href": "250_Projects/project1.html#questiontask-2",
+    "title": "Project 1: What’s in a Name?",
+    "section": "Question|Task 2",
+    "text": "Question|Task 2\nIf you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?\nAccording to the data provided by the graph I would assume that Brittany was most likely 34. I would not Guess her to be any age north of 24, or south of the age of 44.\n\n\nShow the code\n# Filter the data for the name \"Brittany\"\nbrittany_df = students[students['name'] == 'Brittany']\n\n# Calculate the total number of people named Brittany across states per year\nstates = [col for col in brittany_df.columns if col not in ['name', 'year', 'Total']] #States\nbrittany_df['total_across_states'] = brittany_df[states].sum(axis=1)\n\n# Calculate mean and median\nhistorical_mean_brittany = brittany_df['total_across_states'].mean() \nhistorical_median_brittany = brittany_df['total_across_states'].median()\n\n# Most likely age\npeak_year = brittany_df.loc[brittany_df['total_across_states'].idxmax(), 'year']\ncurrent_year = 2024\nmost_likely_age = current_year - peak_year\n\n# Plot the usage of the name Brittany over time\n(\n    ggplot(data=brittany_df, mapping=aes(x=\"year\", y=\"total_across_states\"))\n    + geom_point(aes(color=\"year\"))\n    + geom_smooth(method=\"lm\", color='blue')  # Adding a trend line (linear regression)\n    + labs(\n        title=\"Usage of the Name 'Brittany' Over Time\",\n        subtitle=f\"Peak year: {peak_year}, Most likely age: {most_likely_age}\",\n        x=\"Year\",\n        y=\"Total Across States\",\n        color=\"Year\",\n        shape=\"Year\",\n    )\n    + scale_color_gradient(low=\"blue\", high=\"red\")  # Color gradient for year highlighting\n)",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html#questiontask-3",
+    "href": "250_Projects/project1.html#questiontask-3",
+    "title": "Project 1: What’s in a Name?",
+    "section": "Question|Task 3",
+    "text": "Question|Task 3\nMary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names in a single chart. What trends do you notice? I notice that many of these names peaked in popularity around 1954, none of them have recovered in popularity in recent years. If I were to hear any of these names I would assume that they are older.\n\n\nShow the code\nchristian_names_df = students[students['name'].isin(['Mary', 'Martha', 'Peter', 'Paul'])]\n\n# Filter data for years between 1920 and 2000\nchristian_names_df = christian_names_df[(christian_names_df['year'] &gt;= 1920) & (christian_names_df['year'] &lt;= 2000)]\n\n# Calculate the total number of people with these names across states per year\nstates = [col for col in christian_names_df.columns if col not in ['name', 'year', 'Total']]  # Check if 'Total' is still 'Total' after cleaning\nchristian_names_df['total_across_states'] = christian_names_df[states].sum(axis=1)\n\n# Plot the usage of the four names over time\np = (\n    ggplot(data=christian_names_df, mapping=aes(x=\"year\", y=\"total_across_states\", color=\"name\"))\n    + geom_point(aes(shape=\"name\"))\n    + geom_smooth(method=\"lm\", se=False)  # Adding trend lines for each name\n    + labs(\n        title=\"Usage of Christian Names Over Time (1920-2000)\",\n        subtitle=\"Comparing Mary, Martha, Peter, and Paul\",\n        x=\"Year\",\n        y=\"Total Across States\",\n        color=\"Name\",\n        shape=\"Name\",\n    )\n    + scale_color_manual(values=['blue', 'green', 'red', 'orange'])  # Different colors for each name\n)\n\n# Show the plot\np.show()  # Explicitly show the plot",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html#questiontask-4",
+    "href": "250_Projects/project1.html#questiontask-4",
+    "title": "Project 1: What’s in a Name?",
+    "section": "Question|Task 4",
+    "text": "Question|Task 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\nThe name I decided to check was Luke, because Star Wars was released in 1977, which would provide us with the most data possible. Though this is a common name, the graph shows that after the movie’s release there was a sharp increase in children named Luke. With each release of the sequels 1980 and 1983 there are local peaks.\n\n\nShow the code\n# Filter the data for the name 'Luke'\nluke_df = students[students['name'] == 'Luke']\n\n# Filter data for years between 1920 and 2000\nluke_df = luke_df[(luke_df['year'] &gt;= 1920) & (luke_df['year'] &lt;= 2000)]\n\n# Calculate the total number of people named 'Luke' across states per year\nstates = [col for col in luke_df.columns if col not in ['name', 'year', 'Total']]  # Check if 'Total' is still 'Total' after cleaning\nluke_df['total_across_states'] = luke_df[states].sum(axis=1)\n\n# Plot the usage of the name 'Luke' over time\np = (\n    ggplot(data=luke_df, mapping=aes(x=\"year\", y=\"total_across_states\"))\n    + geom_line(color='blue', size=1.5)  # Line plot for the name Luke\n    + geom_vline(xintercept=1977, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, \n                 label='A New Hope (1977)')  # Star Wars: A New Hope\n    + geom_vline(xintercept=1980, linetype='dashed', color='green', size=1, alpha=0.8, show_legend=True, \n                 label='The Empire Strikes Back (1980)')  # The Empire Strikes Back\n    + geom_vline(xintercept=1983, linetype='dashed', color='orange', size=1, alpha=0.8, show_legend=True, \n                 label='Return of the Jedi (1983)')  # Return of the Jedi\n    + labs(\n        title=\"Usage of the Name 'Luke' Over Time (1920-2000)\",\n        subtitle=\"Release years of Star Wars movies marked by dashed lines\",\n        x=\"Year\",\n        y=\"Total Across States\",\n    )\n)\n\n# Show the plot\np.show()",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project1.html#questionstretch",
+    "href": "250_Projects/project1.html#questionstretch",
+    "title": "Project 1: What’s in a Name?",
+    "section": "Question|Stretch",
+    "text": "Question|Stretch\nReproduce the chart Elliot using the data from the names_year.csv file.\nBelow is a recreation of the chart from the stretch goal. Marking the release 1982, rerelease 1985, and rererelease 2002 of E.T. and the popularity of Elliot.\n\n\nShow the code\n# Filter the data for the name 'Elliot'\nelliot_df = students[students['name'] == 'Elliot']\n\n# Filter data for years between 1920 and 2000\nelliot_df = elliot_df[(elliot_df['year'] &gt;= 1950) & (elliot_df['year'] &lt;= 2020)]\n\n# Calculate the total number of people named 'Elliot' across states per year\nstates = [col for col in elliot_df.columns if col not in ['name', 'year', 'Total']]  # Check if 'Total' is still 'Total' after cleaning\nelliot_df['total_across_states'] = elliot_df[states].sum(axis=1)\n\n# Plot the usage of the name 'Elliot' over time\np = (\n    ggplot(data=elliot_df, mapping=aes(x=\"year\", y=\"total_across_states\"))\n    + geom_line(color='blue', size=1.5)  # Line plot for the name Elliot\n    + geom_vline(xintercept=1982, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, \n                 label='E.T. Release (1982)')  # Mark the release of E.T.\n    + geom_vline(xintercept=1985, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, \n                 label='E.T. Rerelease (1985)')  # Mark the rerelease of E.T.\n    + geom_vline(xintercept=2002, linetype='dashed', color='red', size=1, alpha=0.8, show_legend=True, \n                 label='E.T. Rererelease (2002)')  # Mark the rererelease of E.T.\n    + labs(\n        title=\"Usage of the Name 'Elliot' Over Time (1920-2000)\",\n        subtitle=\"E.T. release in 1982 marked by a dashed red line\",\n        x=\"Year\",\n        y=\"Total Across States\",\n    )\n)\n\n# Show the plot\np.show()\n\n\n\n   \n       \n       \n   \n   \n          \n   \n   \n\n\n\nNote: Non executing Python Snippets include (3) ``` followed by (3) more ```, each on their own line. These are not single quotes, they are the key left of the number 1 key on the keyboard. The top row can include the language of code that is pasted inbetween the ``` marks.\nNote: These also work in Slack and it is expected they are used for any code shared in that app. No screen shots allowed.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project3.html",
+    "href": "250_Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "250_Projects/project5.html",
+    "href": "250_Projects/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "250_projects.html",
+    "href": "250_projects.html",
+    "title": "DS250 Projects",
+    "section": "",
+    "text": "Project 0 - Introduction\nProject 1 - What’s in a Name\nProject 2 - Late Flights and Missing Data (JSON)\nProject 3 - Finding Relationships in Baseball\nProject 4 - Can you Predict That?\nProject 5 - The War with StarWars\nProject 6 - Git Your Portfolio Online",
+    "crumbs": [
+      "DS250 Projects"
+    ]
+  },
+  {
+    "objectID": "250_projects.html#repo-for-all-my-projects",
+    "href": "250_projects.html#repo-for-all-my-projects",
+    "title": "DS250 Projects",
+    "section": "",
+    "text": "Project 0 - Introduction\nProject 1 - What’s in a Name\nProject 2 - Late Flights and Missing Data (JSON)\nProject 3 - Finding Relationships in Baseball\nProject 4 - Can you Predict That?\nProject 5 - The War with StarWars\nProject 6 - Git Your Portfolio Online",
+    "crumbs": [
+      "DS250 Projects"
+    ]
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Nicholas Bastian’s CV",
+    "section": "",
+    "text": "Physicist, Mathematician, Cambridge professor.\n\nisaac@applesdofall.org\n\n\n\nStanding on the shoulders of giants, and laying below the feet of the masters.\n\n\nElectrical Engineering, Fencing, Game Devlopment\n\n\n\nNuclear energy, PCB design\n\n\n\n\n2018-2024 Cochise College, Arizona.\n2024 - now BYUI, Idaho"
+  },
+  {
+    "objectID": "resume.html#currently",
+    "href": "resume.html#currently",
+    "title": "Nicholas Bastian’s CV",
+    "section": "",
+    "text": "Standing on the shoulders of giants, and laying below the feet of the masters.\n\n\nElectrical Engineering, Fencing, Game Devlopment\n\n\n\nNuclear energy, PCB design"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Nicholas Bastian’s CV",
+    "section": "",
+    "text": "2018-2024 Cochise College, Arizona.\n2024 - now BYUI, Idaho"
+  }
+]
